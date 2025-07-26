@@ -61,3 +61,18 @@ a {
 .social a {
   margin-right: 10px;
 }
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-photo {
+  width: 200px;
+  border-radius: 10px;
+  border: 3px solid #d60000;
+  object-fit: cover;
+}
+
