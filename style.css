@@ -1,0 +1,148 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding-top: 70px;
+}
+
+/* Navigation bar */
+nav {
+  background-color: #0d6efd;
+  color: white;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+nav .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav .nav-links a:hover {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0d6efd;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 1rem;
+    width: 200px;
+  }
+
+  nav .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    color: white;
+  }
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem auto;
+  display: block;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Section styles */
+section {
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0d6efd;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
